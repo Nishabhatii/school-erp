@@ -1,0 +1,18 @@
+.header{
+height: 60px;
+background-color: #fff;
+border-bottom: 1px solid #ddd;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+margin-left: 200px;
+}
+.Login{
+background-color: #2d6cdf;
+color: white;
+border: none;
+padding: 8px 14px;
+border-radius: 6px;
+cursor: pointer;
+}

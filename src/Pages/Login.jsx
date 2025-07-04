@@ -3,6 +3,7 @@ import './login.css'
 export default function Login(){
     const [email,setEmail]=useState("");
     const [passward,SetPassward]=useState('')
+    
 
     const HandleLogin=(e)=>{
         e.preventDefault();
@@ -20,6 +21,7 @@ export default function Login(){
     <br></br>
 <form className="login-form" onSubmitCapture={HandleLogin}>
     <h2>Student Login</h2>
+    
     <input type="email" placeholder="enter your email" value={email}
      onChange={(e)=>setEmail(e.target.value)}/> 
     <input type="password" placeholder="enter your passward" value={passward}
