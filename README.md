@@ -1,1 +1,1 @@
-A responsive UiI
+A responsive UI
