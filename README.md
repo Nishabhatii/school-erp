@@ -1,6 +1,7 @@
 # 🏫 School ERP System
 
-A simple web-based School ERP system to manage student, 
+A simple web-based School ERP system to manage student,teacher, and admin activities.
+ 
 ## 🚀 Features
 - 🧑‍🎓 Student Management
 - 👩‍🏫 Teacher Login
