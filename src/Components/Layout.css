@@ -1,0 +1,10 @@
+.Layout{
+  display: flex;  
+}
+.Main{
+    margin-left: 200px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f5f7fa;
+    min-height: 100vh;
+}
