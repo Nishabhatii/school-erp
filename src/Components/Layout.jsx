@@ -1,6 +1,6 @@
 import Sidebar from "./Sidebar"
 import Header from "./Header"
-import "./layout.css"
+import "./Layout.css"
 export default function Layout({Children}) {
     return(
         <div className="Layout">
