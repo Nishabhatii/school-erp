@@ -9,6 +9,7 @@ export default function Login(){
         e.preventDefault();
         if (email&& passward) {
             window.location.href="/dashboard";
+            alert("Login sucessful")
 
             
         }else{
@@ -19,7 +20,7 @@ export default function Login(){
 <div className="login">
     <h1>XYZ public school,Faridabad</h1>
     <br></br>
-<form className="login-form" onSubmitCapture={HandleLogin}>
+<form className="login-form" onSubmit={HandleLogin}>
     <h2>Student Login</h2>
     
     <input type="email" placeholder="enter your email" value={email}

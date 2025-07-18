@@ -1,58 +1,198 @@
-element.style {
-    display: flex;
-    background-color:blue;
-;
-    width: initial;
-    
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
-.login{
-    /* display:flex; */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #eaf0f7;
-}
-.login-form{
-    background-color: white;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1)
-    
-}
-.login-form h2{
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333; 
 
+/* Background Styling */
+body {
+  background: linear-gradient(to right, #e6f9f0, #f9f9f9);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.login-form input {
-    width : 100%;
-    padding : 12px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 15px;
-}
-.login-form button{
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background-color: #2d6cdf;
-    color: white;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
 
+/* Header */
+.header {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
-.login-form button:hover{
-    background-color: #1a54b3;
-   
+
+.header-left {
+  display: flex;
+  align-items: center;
 }
-h1{
-    margin-bottom: 20px;
-    color: blue;
-    font-weight: bold;
-    font-size: 28px;
-text-align: center;
-justify-content: center;
+
+.school-logo {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.school-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0b9444;
+}
+
+.school-address {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.header-right button {
+  background-color: #0b9444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header-right button:hover {
+  background-color: #0a7a37;
+}
+
+/* Notice Bar */
+.notice-bar {
+  background: linear-gradient(90deg, #ffffff, #d4f5e4, #ffffff);
+  padding: 8px 0;
+  color: #0b9444;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #0b9444;
+  border-bottom: 1px solid #0b9444;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Login Form Container */
+.login-form-container {
+  background-color: #ffffff;
+  max-width: 400px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0b9444;
+}
+
+/* Form Elements */
+.login-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-container input,
+.login-form-container select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.login-form-container button {
+  background-color: #0b9444;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form-container button:hover {
+  background-color: #0a7a37;
+}
+
+/* Extra Links */
+.login-form-container .extras {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #444;
+}
+
+.login-form-container .extras a {
+  color: #0b9444;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.login-form-container .extras a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #0b9444;
+  color: white;
+  padding: 20px 10px 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+.footer-text {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+
+  .login-form-container {
+    margin: 20px auto;
+  }
 }

@@ -1,22 +1,18 @@
-// import Header from './Components/Header';
-import Login from './Components/Login'
-import Layout from "./Components/Layout";
-import Dashboard from './Components/Dashboard';
-import './App.css';
-import {Route,Routes } from 'react-router-dom';
+
+import Header from "./Components/Header";
+import NoticeBar from "./Components/NoticeBar";
+import LoginForm from "./Components/LoginForm";
+import Footer from "./Components/Footer";
+import "./Components/Login.css";
 
 function App() {
   return (
-    
     <div className="App">
-     {/* <Header/> */}
-{/*section homework etc  */}
-<Routes>
-     <Route path="/" element={<Login/>}/>
-  <Route path="/dashboard" element={<Layout><Dashboard/></Layout>}/> 
-  </Routes>
+      <Header />
+      <NoticeBar />
+      <LoginForm />
+      <Footer />
     </div>
-    
   );
 }
 

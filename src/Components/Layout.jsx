@@ -1,14 +1,14 @@
 import Sidebar from "./Sidebar"
 import Header from "./Header"
 import "./Layout.css"
-export default function Layout({Children}) {
+export default function Layout({children}) {
     return(
         <div className="Layout">
            <Sidebar/>
 <div className="Main">
     
 <Header/>
-{Children}
+{children}
     </div>
     </div>
     

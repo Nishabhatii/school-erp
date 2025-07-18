@@ -1,15 +1,24 @@
-import "./Header.css"
 
-export default function Header() {
-    return(
-<div className="header">
-<span>Welcome,Student</span>
-<button className="Login">Logout</button>
+// import "./Components/Login.css";
+// import schoolLogo from "../assets/img/school-logo.jpg"; 
 
-
-
-</div>
-
-
-    )
+function Header() {
+  return (
+    <header className="header">
+      <div className="header-left">
+        {/* <img src={schoolLogo} alt="School Logo" className="school-logo" /> */}
+        <div className="school-info">
+          <h1 className="school-name">Green Valley Public School</h1>
+          <p className="school-address">Sector 10, Gurugram, Haryana, India</p>
+        </div>
+      </div>
+      <div className="header-right">
+        <button className="back-button" onClick={() => window.history.back()}>
+          ⬅ Back
+        </button>
+      </div>
+    </header>
+  );
 }
+
+export default Header;
