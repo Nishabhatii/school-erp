@@ -8,8 +8,8 @@ function Header() {
       <div className="header-left">
         {/* <img src={schoolLogo} alt="School Logo" className="school-logo" /> */}
         <div className="school-info">
-          <h1 className="school-name">Green Valley Public School</h1>
-          <p className="school-address">Sector 10, Gurugram, Haryana, India</p>
+          <h1 className="school-name">XYZ International School</h1>
+          <p className="school-address">Sector 101,Faridabad,Haryana,India</p>
         </div>
       </div>
       <div className="header-right">

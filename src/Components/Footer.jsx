@@ -10,7 +10,7 @@ function Footer() {
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
         <a href="mailto:contact@xyz.edu">Email</a>
       </div>
-      <p className="footer-text">© 2025 xyz international School. All rights reserved.</p>
+      <p className="footer-text">© 2025 XYZ International School. All rights reserved.</p>
       <h5>(Nisha B)</h5>
     </footer>
   );
