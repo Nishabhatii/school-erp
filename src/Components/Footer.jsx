@@ -11,7 +11,7 @@ function Footer() {
         <a href="mailto:contact@xyz.edu">Email</a>
       </div>
       <p className="footer-text">© 2025 xyz international School. All rights reserved.</p>
-      <h3>Nisha B</h3>
+      <h5>(Nisha B)</h5>
     </footer>
   );
 }
