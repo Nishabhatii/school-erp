@@ -8,9 +8,10 @@ function Footer() {
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <a href="mailto:contact@greenvalley.edu">Email</a>
+        <a href="mailto:contact@xyz.edu">Email</a>
       </div>
-      <p className="footer-text">© 2025 Green Valley Public School. All rights reserved.</p>
+      <p className="footer-text">© 2025 xyz international School. All rights reserved.</p>
+      <h3>Nisha B</h3>
     </footer>
   );
 }
