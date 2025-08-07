@@ -19,7 +19,7 @@ const Insidefooter = () => {
         <div className="social-icons">
           <a href="#" aria-label="Facebook">f</a>
           <a href="#" aria-label="Twitter">X</a>
-          <a href="#" aria-label="YouTube">YouTube</a>
+          <a href="#" aria-label="YouTube">🎬</a>
         </div>
         <a className="download-link" href="#">Download Enquiry Form</a>
       </div>

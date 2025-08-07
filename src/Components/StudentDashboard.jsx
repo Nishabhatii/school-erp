@@ -1,4 +1,4 @@
-import Insidefooter from "./Insidefooter";
+import Insidefooter from "./insidefooter";
 import "./StudentDashboard.css";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -57,7 +57,7 @@ export default function StudentDashboard() {
           </div>
         </div>
       </div>
-      <Insidefooter/>
+      <Insidefooter className="studentfooter"/>
     </div>
   );
 }
