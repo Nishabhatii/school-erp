@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import  { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("student");
+  const navigate=useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
+    if (email && password) {
+    if (role === "student") navigate("/Student-Dashboard");
+    // else if (role === "teacher") navigate("/teacher-dashboard");
+    // else if (role === "admin") navigate("/admin-dashboard");
+  } else {
+    alert("Enter correct details");
+  }
+};
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Role:", role);
     // Add your login logic here
-  };
+  ;
 
   return (
     <div className="login-form-container">
@@ -61,7 +71,7 @@ function LoginForm() {
 
         <button type="submit">Login</button>
 
-        <p className="login-help-text">Or login with your credentials</p>
+        {/* <p className="login-help-text">Or login with your credentials</p> */}
 
         <div className="forgot-container">
           <a href="/reset-password">Forgot Password?</a>
