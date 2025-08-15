@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Home, Calendar, BookOpen, FileText, Bell } from "lucide-react";
 
 export default function Sidebar() {

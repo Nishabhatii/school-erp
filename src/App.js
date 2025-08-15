@@ -1,6 +1,5 @@
 // import React from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import LoginPage from "./Components/LoginPage";
 import StudentDashboard from "./Components/StudentDashboard";
 // import TeacherDashboard from "./Pages/TeacherDashboard"; // future use
@@ -12,10 +11,7 @@ function App() {
         < Route path="/" element={
           <LoginPage /> } />
         <Route path="/Student-Dashboard" element={<StudentDashboard />} />
-        {/* // <Route path="/school-erp" element={ */}
-      
-        {/* //   <LoginForm />} /> */}
-        {/* <Route path="/teacher-dashboard" element={<TeacherDashboard />} /> */}
+        <Route path="/school-erp" element={<LoginPage/>}/>
       </Routes>
     </Router>
   );

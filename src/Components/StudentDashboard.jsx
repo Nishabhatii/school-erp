@@ -1,5 +1,7 @@
 import Insidefooter from "./insidefooter";
 import "./StudentDashboard.css";
+
+
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
@@ -20,7 +22,7 @@ export default function StudentDashboard() {
       </aside>
 
       <div className="main-content">
-        <header className="topbar">
+        <header className="topbar" style={{ backgroundColor:"#2c3e50" , color:"white"}}>
           <span className="welcome">Welcome, Student</span>
           <button className="logout-btn">Logout</button>
         </header>
