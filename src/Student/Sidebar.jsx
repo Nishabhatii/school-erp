@@ -3,7 +3,7 @@ import { Home, Calendar, BookOpen, FileText, Bell } from "lucide-react";
 
 export default function Sidebar() {
   return (
-    <aside className="w-64 bg-white shadow-md p-4 hidden md:block">
+    <div className="w-64 bg-white shadow-md p-4 hidden md:block">
       <h2 className="text-2xl font-bold mb-6 text-blue-600">School ERP</h2>
       <nav className="space-y-4 text-gray-700">
         <a href="#" className="flex items-center space-x-2 hover:text-blue-600">
@@ -27,6 +27,6 @@ export default function Sidebar() {
           <span>Notices</span>
         </a>
       </nav>
-    </aside>
+    </div>
   );
 }
