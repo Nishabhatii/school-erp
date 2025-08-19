@@ -12,7 +12,7 @@ function LoginForm() {
     e.preventDefault();
     if (email && password) {
     if (role === "student") navigate("/Student-Dashboard");
-    // else if (role === "teacher") navigate("/teacher-dashboard");
+    else if (role === "teacher") navigate("/Teacher/TeacherDashboard");
     // else if (role === "admin") navigate("/admin-dashboard");
   } else {
     alert("Enter correct details");
