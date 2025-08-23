@@ -2,8 +2,9 @@
 .dashboard {
   display: flex;
   height: 100vh;
+  width: 200vh;
   font-family: Arial, sans-serif;
-  background-color: #f5f7fa;
+  background-color: #12cc65;
 }
 
 /* Sidebar */

@@ -1,6 +1,6 @@
 
-import "./Style/TAttendance.css";
-
+import "./Style/TAttendence.css";
+import { useState } from "react";
 export default function Attendance() {
   const [students] = useState([
     { id: 1, name: "Ravi" },

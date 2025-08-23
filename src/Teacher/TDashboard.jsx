@@ -1,5 +1,5 @@
 
-import "./TDashboard.css";
+import "./Style/TDashboard.css";
 
 const Dashboard = () => {
   return (

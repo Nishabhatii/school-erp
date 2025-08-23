@@ -1,0 +1,29 @@
+.timetable-page {
+  padding: 20px;
+}
+
+.timetable-page h2 {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.timetable-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-page th,
+.timetable-page td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.timetable-page th {
+  background: #007bff;
+  color: white;
+}
+
+.timetable-page tr:nth-child(even) {
+  background: #f9f9f9;
+}

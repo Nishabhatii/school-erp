@@ -11,7 +11,10 @@ body {
   background: linear-gradient(to right, #e6f9f0, #f9f9f9);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+ margin: 0;
 }
 
 /* Header */
@@ -30,10 +33,6 @@ body {
   align-items: center;
 }
 
-.school-logo {
-  height: 60px;
-  margin-right: 15px;
-}
 
 .school-title {
   font-size: 28px;
@@ -106,22 +105,6 @@ body {
   }
 }
 
-/* 
-/* Notice Bar 
-.notice-bar {
-  background: linear-gradient(90deg, #ffffff, #d4f5e4, #ffffff);
-  padding: 8px 0;
-  color: #0b9444;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  border-top: 1px solid #0b9444;
-  border-bottom: 1px solid #0b9444;
-  animation: shine 4s linear infinite;
-  background-size: 400% auto;
-background-position: 200% center;
-
-}
 
 @keyframes shine {
   0% {
