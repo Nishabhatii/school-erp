@@ -1,50 +1,49 @@
-import "./StudentDashboard.css";
 
+import "./StudentDashboard.css";
 import { Link } from "react-router-dom";
+
+import Attendence from "../Student/Attendence";
+
+import FeeStatus from "../Student/FeeStatus";
+
 function StudentDashboard() {
-  
+  const exams = [
+    { subject: "Physics", date: "25 Aug" },
+    { subject: "Math", date: "28 Aug" },
+    { subject: "Chemistry", date: "30 Aug" },
+  ];
 
   return (
     <div className="dashboard">
-      {/* Sidebar */}
+    
       <aside className="sidebar">
         <h2 className="logo">Student ERP</h2>
         <nav>
-          <a href="#">Home</a>
-          
-
-<Link to="/student-dashboard/Attendence">Attendence</Link>
-<Link to="/student-dashboard/timetable">Timetable</Link>
-<Link to="/student-dashboard/Homework">Homework</Link>
-<Link to="/student-dashboard/Notice">Notice</Link>
-
-         
-          <a href="#">Results</a>
-          <a href="#">Attendance</a>
-          <a href="#">Fees</a>
-          <a href="#">Library</a>
-          <a href="#">Notices</a>
+          <Link to="#">Home</Link>
+          <Link to="/student-dashboard/Attendence">Attendence</Link>
+          <Link to="/student-dashboard/timetable">Timetable</Link>
+          <Link to="/student-dashboard/Homework">Homework</Link>
+          <Link to="/student-dashboard/Notice">Notice</Link>
+          <Link to="#">Results</Link>
+          <Link to="#">Attendance</Link>
+          <Link to="#">Fees</Link>
+          <Link to="#">Library</Link>
+          <Link to="#">Notices</Link>
         </nav>
       </aside>
 
-      {/* Main Content */}
+     
       <main className="main">
-        {/* Topbar */}
+       
         <header className="topbar">
           <h3>Welcome, Student</h3>
           <div className="profile-icons">
-            <div className="icon-wrapper" >
-              <span className="icon">🔔</span>
-             
-            </div>
-            <div className="icon-wrapper" >
-              <span className="icon">👤</span>
-              
-            </div>
+            <div className="icon-wrapper"><span className="icon">🔔</span></div>
+            <div className="icon-wrapper"><span className="icon">👤</span></div>
           </div>
         </header>
 
-        {/* Cards */}
+        {/* Cards Section */}
         <div className="cards">
           <div className="card">
             <h4>Today's Timetable</h4>
@@ -56,28 +55,13 @@ function StudentDashboard() {
             <p>Click to view</p>
           </div>
 
-          <div className="card">
-            <h4>Attendance</h4>
-            <p>78% Present</p>
-          </div>
+          <Attendence percentage={78} />
         </div>
 
         {/* Extra Section */}
         <div className="extra">
-          <div className="box">
-            <h4>Upcoming Exams</h4>
-            <ul>
-              <li>Physics – 25 Aug</li>
-              <li>Math – 28 Aug</li>
-              <li>Chemistry – 30 Aug</li>
-            </ul>
-          </div>
-
-          <div className="box">
-            <h4>Fee Status</h4>
-            <p className="green">Paid till September</p>
-            <p className="red">Next due: October</p>
-          </div>
+         
+          <FeeStatus paidTill="September" nextDue="October" />
         </div>
       </main>
     </div>

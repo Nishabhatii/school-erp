@@ -1,25 +1,26 @@
 
-import { CircularProgressbar, buildStyles} from "react-circular-progressbar";
+
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import "./FeeStatus.css";
 
-export default function AttendanceCard() {
-  const attendance = 92;
-
+function Attendence({ percentage }) {
   return (
-    <div className="bg-white rounded-xl shadow p-4 text-center">
-      <h4 className="font-semibold text-lg mb-4">📊 Attendance</h4>
-      <div className="w-28 h-28 mx-auto">
+    <div className="card">
+      <h4>Attendance</h4>
+      <div className="progress-wrapper">
         <CircularProgressbar
-          value={attendance}
-          text={`${attendance}%`}
+          value={percentage}
+          text={`${percentage}%`}
           styles={buildStyles({
-            pathColor: "#10B981",
-            textColor: "#10B981",      
-            trailColor: "#d1fae5",     
-            textSize: "16px",
+            textColor: "#2c3e50",
+            pathColor: percentage >= 75 ? "green" : "red",
+            trailColor: "#eee",
           })}
         />
       </div>
     </div>
   );
 }
+
+export default Attendence;

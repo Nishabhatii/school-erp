@@ -12,7 +12,7 @@ export default function TeacherDashboard() {
         <nav>
           <ul>
             <li><Link to="">Dashboard</Link></li>
-            <li><Link to="attendence">Attendance</Link></li>
+            <li><Link to="attendence">Attendence</Link></li>
             <li><Link to="timetable">Timetable</Link></li>
           </ul>
         </nav>
@@ -27,7 +27,7 @@ export default function TeacherDashboard() {
         <div className="teacher-page">
           <Routes>
             <Route path="" element={<Dashboard />} />
-            <Route path="attendance" element={<Attendence />} />
+            <Route path="attendence" element={<Attendence />} />
             <Route path="timetable" element={<Timetable />} />
           </Routes>
         </div>
