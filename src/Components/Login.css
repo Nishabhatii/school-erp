@@ -5,13 +5,49 @@
   box-sizing: border-box;
   font-family: "Segoe UI", sans-serif;
 }
+/* Container with entry animation */
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 88vh;
+  background: #f9fafb;
+  
+  background-color: #ffffff;
+  max-width: 400px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Form animation */
+.login-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(226, 230, 227, 0.1);
+  width: 320px;
+  animation: slideFadeIn 1.3s ease forwards;
+  opacity: 0; 
+  transform: translateX(30px); 
+}
+
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Background Styling */
 body {
   background: linear-gradient(to right, #e6f9f0, #f9f9f9);
   min-height: 100vh;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
  margin: 0;
@@ -22,10 +58,12 @@ body {
   background-color: #ffffff;
   display: flex;
   align-items: center;
+  width: 210vh;
   justify-content: space-between;
   padding: 15px 30px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
+  padding-left: 3em;
 }
 
 .header-left {
@@ -41,7 +79,8 @@ body {
 }
 
 .school-address {
-  font-size: 14px;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: #666;
   margin-top: 4px;
   display:flex;
@@ -63,91 +102,72 @@ body {
 }
 /* Notice Bar */
 .notice-bar {
-  background: linear-gradient(90deg, #ffffff, #d4f5e4, #ffffff);
-  background-size: 400% auto; /* shine ke liye */
-  background-position: 200% center;
+  width: 100%;
+  background: #0b9444;
   padding: 8px 0;
-  color: #0b9444;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  border-top: 1px solid #0b9444;
-  border-bottom: 1px solid #0b9444;
-  animation: shine 4s linear infinite;
-  overflow: hidden; /* text ko container ke andar rakhta hai */
-}
-
-@keyframes shine {
-  0% {
-    background-position: 200% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
+  overflow: hidden;
+  border-bottom: 2px solid #17ac37;
+  position: relative;
+  height: 40px; 
 }
 
 .scroll-text {
   display: inline-block;
   white-space: nowrap;
-  animation: bounce-scroll 22s ease-in-out infinite;
+  font-weight: 600;
+  color: #f5f2ef;
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  animation: bounce-scroll 10s linear infinite alternate;
 }
 
-/* Text bounce animation */
-@keyframes bounce-scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  50% {
-    transform: translateX(calc(-100%));
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-
-@keyframes shine {
-  0% {
-    background-position: 200% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
-}
 @keyframes bounce-scroll {
   0% {
     transform: translateX(0);
   }
-  50% {
-    transform: translateX(calc(-100% + 100vw));
-  }
   100% {
-    transform: translateX(0);
+    transform: translateX(calc(100vw - 100%));
   }
 }
 
-.scroll-text {
-  display: inline-block;
-  padding-left: 100%;
-  white-space: nowrap;
-  animation: scroll-left 12s linear infinite;
-} */
 
 /* Login Form Container */
-.login-form-container {
-  background-color: #ffffff;
-  max-width: 400px;
-  width: 90%;
-  margin: 40px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 .login-form-container h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #0b9444;
+}
+.login-form button:hover {
+  background: #732e81; 
+  transform: scale(1.05);
+}
+
+.login-form button:active {
+  background: #5b2170;
+  transform: scale(0.95);
+}
+
+.login-form input:focus {
+  border: 2px solid #216830;
+  outline: none;
+  box-shadow: 0 0 8px rgba(23, 161, 64, 0.4);
+  transition: 0.3s;
+}
+
+.login-form .signup-link a,
+.login-form .forgot-container a {
+  color: #2563eb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-form .signup-link a:hover,
+.login-form .forgot-container a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
 /* Form Elements */
@@ -160,7 +180,7 @@ body {
 .login-form-container select {
   padding: 10px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #104714;
   border-radius: 8px;
   font-size: 14px;
 }
@@ -169,12 +189,21 @@ body {
   background-color: #0b9444;
   color: white;
   border: none;
-  padding: 10px;
-  font-size: 15px;
+  
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
+  background: #3b693f;  
+  
+  padding: 10px 20px;
+  font-size: 16px;
+ 
+
+  transition: all 0.3s ease;
 }
+
+
 
 .login-form-container button:hover {
   background-color: #0a7a37;
@@ -223,7 +252,7 @@ body {
 }
 
 .social-links a:hover {
-  color: #ffd700;
+  color: #c98732;
 }
 
 .footer-text {

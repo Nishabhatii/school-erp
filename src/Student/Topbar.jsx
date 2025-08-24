@@ -1,3 +1,4 @@
+import "./topbar.css";
 
 
 export default function Topbar({ name = "Student", onLogout }) {

@@ -4,7 +4,7 @@
   height: 100vh;
   width: 200vh;
   font-family: Arial, sans-serif;
-  background-color: #12cc65;
+  background-color: #f5f7fa;
 }
 
 /* Sidebar */
@@ -116,11 +116,34 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 .box h4 {
   margin-bottom: 12px;
-  color: #34495e;
+  color: #0e4d13;
 }
+.profile-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-label {
+  font-size: 0.75rem;
+  color: #333;
+  margin-top: 4px;
+}
+
 
 .box ul {
   padding-left: 20px;

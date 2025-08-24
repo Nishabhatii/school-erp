@@ -13,7 +13,7 @@ function LoginForm() {
     if (email && password) {
     if (role === "student") navigate("/Student-Dashboard");
     else if (role === "teacher") navigate("/Teacher/TeacherDashboard");
-    // else if (role === "admin") navigate("/admin-dashboard");
+    
   } else {
     alert("Enter correct details");
   }
@@ -21,7 +21,7 @@ function LoginForm() {
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Role:", role);
-    // Add your login logic here
+
   ;
 
   return (
@@ -71,7 +71,7 @@ function LoginForm() {
 
         <button type="submit">Login</button>
 
-        {/* <p className="login-help-text">Or login with your credentials</p> */}
+        
 
         <div className="forgot-container">
           <a href="/reset-password">Forgot Password?</a>
