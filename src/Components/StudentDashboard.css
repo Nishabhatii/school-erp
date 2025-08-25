@@ -104,14 +104,28 @@
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
   transition: transform 0.2s;
-  width: 300px;
-  margin: 0 10px;
-  height: 40vh;
+  width: 430px;
+  margin: 15px 20px 20px 20px;
+  height: 37vh;
   align-content: center;
   
 }
 
+.card attendance-card .progress-wrapper {
+  
+  width: 30%;
+  max-width: 80px;
+  aspect-ratio: 1 / 1; 
+  margin-top: 10px;
+height: 190px;
 
+}
+.CircularProgressbar {
+    width: 100%;
+    vertical-align: middle;
+    height: 180px;
+    
+}
 .card:hover {
   transform: translateY(-5px);
 }
@@ -120,10 +134,24 @@
   margin-bottom: 10px;
   font-size: 18px;
   color: #2c3e50;
-  align-items: center;
+  text-align: center;
 }
 
+.card p{
+  color: #7f8c8d;
+  text-align: center;
+  text-decoration: underline
+}
 
+.cards .card .green {
+  color: green;
+  font-weight: bold;
+}
+
+.cards .card .red {
+  color: red;
+  font-weight: bold;
+}
 .extra {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -133,7 +161,7 @@
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 8px rgba(24, 119, 67, 0.08);
 }
 
 .box h4 {
@@ -141,12 +169,3 @@
   color: #2c3e50;
 }
 
-.green {
-  color: green;
-  font-weight: bold;
-}
-
-.red {
-  color: red;
-  font-weight: bold;
-}

@@ -54,12 +54,12 @@ function StudentDashboard() {
             <h4>Homework</h4>
             <p>Click to view</p>
           </div>
-
-          <Attendence percentage={78} />
+<div className="card"><Attendence percentage={78} /></div>
+          
        
 
         {/* Extra Section */}
-        <div >
+        <div  >
          
           <FeeStatus paidTill="September" nextDue="October" />
         </div>
