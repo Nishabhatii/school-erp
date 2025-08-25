@@ -1,37 +1,54 @@
-import { Link, Routes, Route } from "react-router-dom";
-import Dashboard from "./TDashboard";
-import Attendence from "./TAttendence";
-import Timetable from "./TTimetable";
-import "./Style/Teacher.css";
+import { Routes, Route } from "react-router-dom";
+import TeacherSidebar from "./TeacherSidebar";
+import TeacherTopbar from "./TeacherTopbar";
+import TDashboardhome from "./TDashboardhome";  // 👈 New
+import TAttendance from "./TAttendance";
+import TTimetable from "./TTimetable";
+import TAssignments from "./TAssignments";
+import TNotice from "./TNotice";
+import "./Teacher.css";
+
+
+
+
 
 export default function TeacherDashboard() {
   return (
     <div className="teacher-layout">
-      <div className="teacher-sidebar">
-        <h2>Teacher Panel</h2>
-        <nav>
-          <ul>
-            <li><Link to="">Dashboard</Link></li>
-            <li><Link to="attendence">Attendence</Link></li>
-            <li><Link to="timetable">Timetable</Link></li>
-          </ul>
-        </nav>
-      </div>
+      <TeacherSidebar />
 
-      {/* Main Content */}
-      <main className="teacher-content">
-        <header className="teacher-navbar">
-          <h1>School ERP - Teacher Dashboard</h1>
-        </header>
+      <div className="teacher-main">
+        <TeacherTopbar />
 
-        <div className="teacher-page">
+        <main className="teacher-content">
           <Routes>
-            <Route path="" element={<Dashboard />} />
-            <Route path="attendence" element={<Attendence />} />
-            <Route path="timetable" element={<Timetable />} />
+            <Route index element={<TDashboardhome />} />  
+            <Route path="attendance" element={<TAttendance />} />
+            <Route path="timetable" element={<TTimetable />} />
+            <Route path="assignments" element={<TAssignments />} />
+            <Route path="notice" element={<TNotice />} />
           </Routes>
+          <div className="cards">
+          <div className="card">
+            <h4>Today's Timetable</h4>
+            <p>Click to view</p>
+          </div>
+
+          <div className="card">
+            <h4>Homework</h4>
+            <p>Click to view</p>
+          </div>
+
+          < TAttendance percentage={78} />
         </div>
-      </main>
+
+        {/* Extra Section */}
+        <div className="extra">
+         
+          <TNotice paidTill="September" nextDue="October" />
+        </div>
+        </main>
+      </div>
     </div>
   );
 }

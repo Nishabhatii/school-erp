@@ -1,17 +1,19 @@
+import "./Teacher.css";
 
-import "./Style/TTimetable.css";
-
-export default function Timetable() {
+export default function TTimetable() {
   const timetable = [
-    { day: "Monday", subject: "Physics", time: "9:00 AM" },
-    { day: "Tuesday", subject: "Maths", time: "10:00 AM" },
-    { day: "Wednesday", subject: "Chemistry", time: "11:00 AM" },
+    { day: "Monday", subject: "Maths", time: "9:00 - 10:00" },
+    { day: "Monday", subject: "Physics", time: "10:00 - 11:00" },
+    { day: "Tuesday", subject: "Chemistry", time: "9:00 - 10:00" },
+    { day: "Wednesday", subject: "Biology", time: "11:00 - 12:00" },
+    { day: "Thursday", subject: "English", time: "12:00 - 1:00" },
+    { day: "Friday", subject: "Computer Science", time: "2:00 - 3:00" },
   ];
 
   return (
-    <div className="timetable-page">
+    <div className="page-box">
       <h2>Class Timetable</h2>
-      <table>
+      <table className="attendance-table">
         <thead>
           <tr>
             <th>Day</th>

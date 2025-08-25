@@ -28,7 +28,7 @@ function StudentDashboard() {
           <Link to="#">Attendance</Link>
           <Link to="#">Fees</Link>
           <Link to="#">Library</Link>
-          <Link to="#">Notices</Link>
+          <Link to="#/Student/attendence">Notices</Link>
         </nav>
       </aside>
 
@@ -56,13 +56,14 @@ function StudentDashboard() {
           </div>
 
           <Attendence percentage={78} />
-        </div>
+       
 
         {/* Extra Section */}
-        <div className="extra">
+        <div >
          
           <FeeStatus paidTill="September" nextDue="October" />
         </div>
+         </div>
       </main>
     </div>
   );
