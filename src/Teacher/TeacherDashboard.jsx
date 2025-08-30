@@ -38,8 +38,8 @@ export default function TeacherDashboard() {
             <h4>Homework</h4>
             <p>Click to view</p>
           </div>
-
-          < TAttendance percentage={78} />
+<div > < TAttendance percentage={78} /></div>
+         
         </div>
 
         {/* Extra Section */}

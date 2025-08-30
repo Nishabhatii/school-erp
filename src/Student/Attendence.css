@@ -1,0 +1,40 @@
+.attendance-card {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+  min-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  width: 300px;
+
+
+
+}
+
+.attendance-card:hover {
+  transform: translateY(-5px);
+}
+
+.card attendance-card .progress-wrapper {
+  
+  width: 30%;
+  max-width: 80px;
+  aspect-ratio: 1 / 1; 
+  margin-top: 10px;
+height: 210px;
+
+}
+.CircularProgressbar {
+    width: 100%;
+    vertical-align: middle;
+    height: 220px;
+    
+}
+
+

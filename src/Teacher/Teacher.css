@@ -153,6 +153,7 @@
   cursor: pointer;
   margin-left: 10px;
   transition: 0.2s;
+  
 }
 .btn-submit:hover {
   background: #77924c;
@@ -161,7 +162,12 @@
 /* Forms */
 .form-box {
   margin: 15px 0;
-}
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;}
 
 .form-box input {
   padding: 8px 10px;
@@ -174,6 +180,9 @@
 .notice-list {
   margin-top: 15px;
   padding-left: 20px;
+  width: 220px;
+  height: 200px;
+
 }
 
 .notice-list li {
@@ -184,3 +193,29 @@
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
+.content-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Attendance Box */
+.attendance-box {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Notice Box */
+.notice-box {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
