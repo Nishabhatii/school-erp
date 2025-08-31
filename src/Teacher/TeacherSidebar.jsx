@@ -11,10 +11,10 @@ export default function TeacherSidebar() {
           <li><Link to="/teacher/timetable">📅 Timetable</Link></li>
           <li><Link to="/teacher/assignments">📝 Assignments</Link></li>
           <li><Link to="/teacher/notice">📢 Notice Board</Link></li>
-          <li><Link to="/teacher/notice">👩‍💻Principal's message</Link></li>
-          <li><Link to="/teacher/notice">👨‍🎓Student's Record</Link></li>
-          <li><Link to="/teacher/notice"> 🚀Upcoming Event</Link></li>
-          <li><Link to="/teacher/notice">💬 About</Link></li>
+          <li><Link to="/teacher/principalmsg">👩‍💻Principal's message</Link></li>
+          <li><Link to="/teacher/studentrecord">👨‍🎓Student's Record</Link></li>
+          <li><Link to="/teacher/event"> 🚀Upcoming Event</Link></li>
+          <li><Link to="/teacher/about">💬 About</Link></li>
 
         </ul>
       </nav>

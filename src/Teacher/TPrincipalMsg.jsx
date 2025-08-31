@@ -1,11 +1,11 @@
-// TPrincipalMsg.jsx
+import "./Teacher.css";
 export default function TPrincipalMsg({ name, message, photo }) {
   return (
     <div className="principal-card">
       <div className="principal-header">
         <img
           src={photo || "https://via.placeholder.com/80"}
-          alt="Principal"
+          alt={name || "Principal"}
           className="principal-photo"
         />
         <div>
@@ -13,7 +13,11 @@ export default function TPrincipalMsg({ name, message, photo }) {
           <p className="designation">Principal</p>
         </div>
       </div>
-      <p className="principal-message">“{message || "Dear Teachers, thank you for your hard work and dedication. Keep inspiring students every day!"}”</p>
+
+      <p className="principal-message">
+        “{message ||
+          "Dear Teachers, thank you for your hard work and dedication. Keep inspiring students every day!"}”
+      </p>
     </div>
   );
 }

@@ -11,10 +11,10 @@ export default function TNotice() {
   const [noticeDate, setNoticeDate] = useState("");
 
   const addNotice = () => {
-    if (newNotice && noticeDate) {
+    if (newNotice.trim() && noticeDate) {
       setNotices([
         ...notices,
-        { id: Date.now(), title: newNotice, date: noticeDate },
+        { id: Date.now(), title: newNotice.trim(), date: noticeDate },
       ]);
       setNewNotice("");
       setNoticeDate("");
@@ -37,7 +37,9 @@ export default function TNotice() {
           value={noticeDate}
           onChange={(e) => setNoticeDate(e.target.value)}
         />
-        <button className="btn-submit" onClick={addNotice}>Add Notice</button>
+        <button className="btn-submit" onClick={addNotice}>
+          Add Notice
+        </button>
       </div>
 
       <ul className="notice-list">
