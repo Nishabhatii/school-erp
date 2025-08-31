@@ -7,11 +7,12 @@ import TTimetable from "./TTimetable";
 import TAssignments from "./TAssignments";
 import TNotice from "./TNotice";
 import "./Teacher.css";
-import TDashboardHome from "./TDashboardhome";
+
 import TPrincipalMsg from "./TPrincipalMsg";
 import TStudentRecord from "./TStudentRecord";
 import TAbout from "./TAbout";
 import TEvent from "./TEvent";
+import TDashboardhome from "./TDashboardhome";
 
 export default function TeacherDashboard() {
   return (
@@ -23,7 +24,7 @@ export default function TeacherDashboard() {
 
         <main className="teacher-content">
           <Routes>
-            <Route index element={<TDashboardHome />} />  
+            <Route index element={<TDashboardhome />} />  
             <Route path="attendance" element={<TAttendance />} />
             <Route path="timetable" element={<TTimetable />} />
             <Route path="assignments" element={<TAssignments />} />
@@ -31,6 +32,7 @@ export default function TeacherDashboard() {
             <Route path="principalmsg" element={<TPrincipalMsg />} />
             <Route path="studentrecord" element={<TStudentRecord />} />
             <Route path="event" element={<TEvent />} />
+            
             <Route path="about" element={<TAbout />} />
           </Routes>
 

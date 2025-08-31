@@ -7,9 +7,9 @@ export default function Sidebar() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/timetable">Timetable</Link>
-        <Link to="/homework">Homework</Link>
-        <Link to="/results">Results</Link>
-        <Link to="/attendance">Attendance</Link>
+        <Link to="/feeStatus">Fee</Link>
+        <Link to="/homework">HomeWork</Link>
+        <Link to="/notice">Attendance</Link>
         <Link to="/fees">Fees</Link>
         <Link to="/library">Library</Link>
         <Link to="/notices">Notices</Link>

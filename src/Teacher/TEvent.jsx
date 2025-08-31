@@ -10,7 +10,7 @@ export default function TEvent({ events }) {
 
   return (
     <div className="event-card">
-      <h3>Upcoming Events</h3>
+      <h3 style={{ color: "#3e994a" }}> Upcoming Events</h3>
       {eventList.length > 0 ? (
         <ul className="event-list">
           {eventList.map((ev, index) => (

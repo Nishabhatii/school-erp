@@ -6,6 +6,8 @@ export default function TeacherTopbar() {
       <h1>Teacher Dashboard</h1>
       <div className="teacher-profile">
         <span className="profile-name">👩‍🏫 Komal Madam</span>
+       <button className="logout-button">🔐</button>
+
       </div>
     </header>
   );

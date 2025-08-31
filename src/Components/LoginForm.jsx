@@ -5,7 +5,7 @@ import "./Login.css";
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("student");
+  const [role, setRole] = useState("Teacher");
   const navigate=useNavigate();
 
   const handleLogin = (e) => {

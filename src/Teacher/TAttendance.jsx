@@ -17,7 +17,7 @@ export default function TAttendance() {
 
   return (
     <div className="page-box">
-      <h2>Mark Attendance</h2>
+      <h2>Class XII</h2>
       <table className="attendance-table">
         <thead>
           <tr>

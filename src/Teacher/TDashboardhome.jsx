@@ -1,46 +1,52 @@
-export default function TDashboardHome() {
-  const attendance = "Present"; 
-  const todayTimetable = [
-    { period: "1st", subject: "Physics", time: "9:00 - 9:45" },
-    { period: "2nd", subject: "Maths", time: "10:00 - 10:45" },
-    { period: "3rd", subject: "Chemistry", time: "11:00 - 11:45" },
-  ];
 
-  const principalMessage =
-    "Dear Teachers, please keep encouraging students towards self-learning and discipline.";
+import "./Teacher.css";
 
-  const extraNote = "Reminder: Submit lesson plan by Friday.";
-
+export default function TDashboardhome() {
   return (
-    <div className="dashboard-home">
-      {/* Attendance */}
-      <div className="card">
-        <h2>Today's Attendance</h2>
-        <p>Status: <strong>{attendance}</strong></p>
+    <div className="teacher-dashboard">
+      {/* Welcome Header */}
+      <div className="welcome-card">
+        <h2>👋 Welcome, Ms. Sharma</h2>
+        <p className="principal-msg">
+          "Keep inspiring students every day!" – Principal
+        </p>
       </div>
 
-      {/* Timetable */}
-      <div className="card">
-        <h2>Today's Timetable</h2>
-        <ul>
-          {todayTimetable.map((item, index) => (
-            <li key={index}>
-              <strong>{item.period}:</strong> {item.subject} ({item.time})
-            </li>
-          ))}
-        </ul>
-      </div>
+      <div className="dashboard-grid">
+        {/* Today's Schedule */}
+        <div className="card">
+          <h3>📅 Today’s Schedule</h3>
+          <ul>
+            <li>1st Period: Physics (10A)</li>
+            <li>2nd Period: Physics (11B)</li>
+            <li><b>Next Class:</b> 12B Chemistry Lab</li>
+          </ul>
+        </div>
 
-      {/* Principal Message */}
-      <div className="card">
-        <h2>Principal's Message</h2>
-        <p>{principalMessage}</p>
-      </div>
+        {/* Attendance */}
+        <div className="card">
+          <h3>✅ Attendance</h3>
+          <p>10A attendance pending</p>
+          <button className="btn">Mark Attendance</button>
+        </div>
 
-      {/* Extra Note */}
-      <div className="card">
-        <h2>Extra Note</h2>
-        <p>{extraNote}</p>
+        {/* Tasks */}
+        <div className="card">
+          <h3>📝 Tasks</h3>
+          <ul>
+            <li>Check Assignment 3 (10B)</li>
+            <li>Upload Quiz Marks (11A)</li>
+          </ul>
+        </div>
+
+        {/* Notices */}
+        <div className="card">
+          <h3>📢 Notices</h3>
+          <ul>
+            <li>Staff Meeting at 3 PM</li>
+            <li>Submit syllabus completion report</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
