@@ -16,7 +16,7 @@ function StudentDashboard() {
   return (
     <div className="dashboard">
     
-      <aside className="sidebar">
+      <div className="sidebar">
         <h2 className="logo">Student ERP</h2>
         <nav>
           <Link to="#">Home</Link>
@@ -30,7 +30,7 @@ function StudentDashboard() {
           <Link to="#">Library</Link>
           <Link to="#/Student/attendence">Notices</Link>
         </nav>
-      </aside>
+      </div>
 
      
       <main className="main">

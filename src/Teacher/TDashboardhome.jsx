@@ -1,5 +1,5 @@
 export default function TDashboardHome() {
-  const attendance = "Present"; // later API se aayega
+  const attendance = "Present"; 
   const todayTimetable = [
     { period: "1st", subject: "Physics", time: "9:00 - 9:45" },
     { period: "2nd", subject: "Maths", time: "10:00 - 10:45" },
