@@ -24,7 +24,10 @@ export default function TeacherDashboard() {
 
         <main className="teacher-content">
           <Routes>
+            {/* ✅ Ye by default open hoga */}
             <Route index element={<TDashboardhome />} />  
+
+            <Route path="home" element={<TDashboardhome />} />  
             <Route path="attendance" element={<TAttendance />} />
             <Route path="timetable" element={<TTimetable />} />
             <Route path="assignments" element={<TAssignments />} />
@@ -32,12 +35,10 @@ export default function TeacherDashboard() {
             <Route path="principalmsg" element={<TPrincipalMsg />} />
             <Route path="studentrecord" element={<TStudentRecord />} />
             <Route path="event" element={<TEvent />} />
-            
             <Route path="about" element={<TAbout />} />
           </Routes>
-
-
-        </main> 
+          
+        </main>
       </div>
     </div>
   );

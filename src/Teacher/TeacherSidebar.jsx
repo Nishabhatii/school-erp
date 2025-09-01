@@ -7,6 +7,7 @@ export default function TeacherSidebar() {
       <h2 className="logo">XYZ School</h2>
       <nav>
         <ul>
+          <li><Link to="/teacher/home">🏠Home</Link></li>
           <li><Link to="/teacher/principalmsg">👩‍💻Principal's Message</Link></li>
           <li><Link to="/teacher/attendance">📋 Attendance</Link></li>
           <li><Link to="/teacher/timetable">📅 Timetable</Link></li>
