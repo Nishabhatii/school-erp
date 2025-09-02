@@ -1,25 +1,48 @@
-import { Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import TeacherSidebar from "./TeacherSidebar";
+import TeacherTopbar from "./TeacherTopbar";
+
+import TAttendance from "./TAttendance";
+import TTimetable from "./TTimetable";
+import TAssignments from "./TAssignments";
+import TNotice from "./TNotice";
 import "./Teacher.css";
 
-export default function TeacherSidebar() {
-  return (
-    <div className="teacher-sidebar">
-      <h2 className="logo">XYZ School</h2>
-      <nav>
-        <ul>
-          <li><Link to="/teacher/home">🏠Home</Link></li>
-          <li><Link to="/teacher/principalmsg">👩‍💻Principal's Message</Link></li>
-          <li><Link to="/teacher/attendance">📋 Attendance</Link></li>
-          <li><Link to="/teacher/timetable">📅 Timetable</Link></li>
-          <li><Link to="/teacher/assignments">📝 Assignments</Link></li>
-          <li><Link to="/teacher/notice">📢 Notice Board</Link></li>
-          
-          <li><Link to="/teacher/studentrecord">👨‍🎓Student's Record</Link></li>
-          <li><Link to="/teacher/event"> 🚀Upcoming Event</Link></li>
-          <li><Link to="/teacher/about">💬 About</Link></li>
+import TPrincipalMsg from "./TPrincipalMsg";
+import TStudentRecord from "./TStudentRecord";
+import TAbout from "./TAbout";
+import TEvent from "./TEvent";
+import TDashboardhome from "./TDashboardhome";
 
-        </ul>
-      </nav>
+export default function TeacherDashboard() {
+  return (
+    <div className="teacher-layout">
+      <TeacherSidebar />
+
+      <div className="teacher-main">
+        <TeacherTopbar />
+
+        <main className="teacher-content">
+          <Routes>
+            {/* ✅ Default route: jab sirf /teacher open hoga */}
+            <Route index element={<TDashboardhome />} />
+
+            {/* ✅ Baaki routes */}
+            <Route path="home" element={<TDashboardhome />} />
+            <Route path="attendance" element={<TAttendance />} />
+            <Route path="timetable" element={<TTimetable />} />
+            <Route path="assignments" element={<TAssignments />} />
+            <Route path="notice" element={<TNotice />} />
+            <Route path="principalmsg" element={<TPrincipalMsg />} />
+            <Route path="studentrecord" element={<TStudentRecord />} />
+            <Route path="event" element={<TEvent />} />
+            <Route path="about" element={<TAbout />} />
+
+            {/* Agar unknown path ho to home pe bhej do */}
+            <Route path="*" element={<Navigate to="home" />} />
+          </Routes>
+        </main>
+      </div>
     </div>
   );
 }
