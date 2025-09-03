@@ -4,7 +4,7 @@ import "./Teacher.css";
 export default function TDashboardhome() {
   return (
     <div className="teacher-dashboard">
-      {/* Welcome Header */}
+      
       <div className="welcome-card">
         <h2>👋 Welcome, Ms. Bhati</h2>
         <p className="principal-msg">
@@ -13,7 +13,7 @@ export default function TDashboardhome() {
       </div>
 
       <div className="dashboard-grid">
-        {/* Today's Schedule */}
+        
         <div className="cardd">
           <h3>📅 Today’s Schedule</h3>
           <ul>
@@ -23,7 +23,7 @@ export default function TDashboardhome() {
           </ul>
         </div>
 
-        {/* Attendance */}
+       
         <div className="cardd">
            <h3>📢 Notices</h3>
           <ul>
@@ -33,7 +33,7 @@ export default function TDashboardhome() {
           <button className="btn">Mark Attendance</button>
         </div>
 
-        {/* Tasks */}
+     
         <div className="cardd">
           <h3>📝 Tasks</h3>
           <ul>

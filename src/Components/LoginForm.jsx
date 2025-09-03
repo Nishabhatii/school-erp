@@ -1,34 +1,40 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("teacher");
-  const navigate=useNavigate();
+  const [role, setRole] = useState("student");
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
+
     if (email && password) {
-    if (role === "student") navigate("/Student-Dashboard");
-    else if (role === "teacher") navigate("/Teacher");
-    
-  } else {
-    alert("Enter correct details");
-  }
-};
+      if (role === "student") 
+        {navigate("/Student-Dashboard");  
+      } else if (role === "teacher") {
+        
+        navigate("/TeacherDashboard")}           
+      else if (role === "admin") 
+       { navigate("/admin");              
+       }
+    } else {
+      alert("Enter correct details");
+    }   
+
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Role:", role);
-
-  ;
+  };
 
   return (
     <div className="login-form-container">
       <form onSubmit={handleLogin} className="login-form">
         <h2>Login</h2>
 
+       
         <select
           className="role-select"
           value={role}
@@ -40,6 +46,7 @@ function LoginForm() {
           <option value="admin">Admin</option>
         </select>
 
+        {/* Email Input */}
         <input
           type="email"
           placeholder="Email"
@@ -48,6 +55,7 @@ function LoginForm() {
           required
         />
 
+       
         <input
           type="password"
           placeholder="Password"
@@ -56,12 +64,14 @@ function LoginForm() {
           required
         />
 
+        
         <div className="options-row">
           <label>
             <input type="checkbox" /> Remember me
           </label>
         </div>
 
+        {/* Terms & Conditions */}
         <div className="terms-container">
           <input type="checkbox" id="terms" required />
           <label htmlFor="terms">
@@ -69,14 +79,15 @@ function LoginForm() {
           </label>
         </div>
 
+        {/* Submit Button */}
         <button type="submit">Login</button>
 
-        
-
+        {/* Forgot Password */}
         <div className="forgot-container">
           <a href="/reset-password">Forgot Password?</a>
         </div>
 
+        {/* Sign Up */}
         <div className="signup-link">
           Don't have an account? <a href="/signup">Sign Up</a>
         </div>

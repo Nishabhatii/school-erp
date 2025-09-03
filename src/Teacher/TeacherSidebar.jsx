@@ -1,48 +1,21 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import TeacherSidebar from "./TeacherSidebar";
-import TeacherTopbar from "./TeacherTopbar";
-
-import TAttendance from "./TAttendance";
-import TTimetable from "./TTimetable";
-import TAssignments from "./TAssignments";
-import TNotice from "./TNotice";
+import { Link } from "react-router-dom";
 import "./Teacher.css";
 
-import TPrincipalMsg from "./TPrincipalMsg";
-import TStudentRecord from "./TStudentRecord";
-import TAbout from "./TAbout";
-import TEvent from "./TEvent";
-import TDashboardhome from "./TDashboardhome";
-
-export default function TeacherDashboard() {
+export default function TeacherSidebar() {
   return (
-    <div className="teacher-layout">
-      <TeacherSidebar />
-
-      <div className="teacher-main">
-        <TeacherTopbar />
-
-        <main className="teacher-content">
-          <Routes>
-            {/* ✅ Default route: jab sirf /teacher open hoga */}
-            <Route index element={<TDashboardhome />} />
-
-            {/* ✅ Baaki routes */}
-            <Route path="home" element={<TDashboardhome />} />
-            <Route path="attendance" element={<TAttendance />} />
-            <Route path="timetable" element={<TTimetable />} />
-            <Route path="assignments" element={<TAssignments />} />
-            <Route path="notice" element={<TNotice />} />
-            <Route path="principalmsg" element={<TPrincipalMsg />} />
-            <Route path="studentrecord" element={<TStudentRecord />} />
-            <Route path="event" element={<TEvent />} />
-            <Route path="about" element={<TAbout />} />
-
-            {/* Agar unknown path ho to home pe bhej do */}
-            <Route path="*" element={<Navigate to="home" />} />
-          </Routes>
-        </main>
-      </div>
+    <div className="teacher-sidebar">
+      <h2 className="sidebar-title">Teacher Panel</h2>
+      <ul>
+        <li><Link to="home">🏠 Home</Link></li>
+        <li><Link to="attendance">📋 Attendance</Link></li>
+        <li><Link to="timetable">📅 Timetable</Link></li>
+        <li><Link to="assignments">📝 Assignments</Link></li>
+        <li><Link to="notice">📢 Notice</Link></li>
+        <li><Link to="principalmsg">🎓 Principal Msg</Link></li>
+        <li><Link to="studentrecord">📖 Student Record</Link></li>
+        <li><Link to="event">🎉 Event</Link></li>
+        <li><Link to="about">ℹ️ About</Link></li>
+      </ul>
     </div>
   );
 }
