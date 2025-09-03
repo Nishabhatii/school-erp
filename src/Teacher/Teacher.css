@@ -570,4 +570,45 @@ margin-left: 17px;
   border-radius: 5px;
   cursor: pointer;
 }
+.profile {
+  text-align: center;
+ margin-left: 17px;
 
+}
+
+.profile-pic {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+.profile .student-name{
+  color: rgb(248, 243, 244);
+  text-decoration: underline;
+}.time{
+  color: white;
+  margin-right: 22px;
+  font-size: 16px;
+  font-weight: 800;
+ padding: 5px 10px;
+  border: 2px solid #a7bdaa;
+ 
+           /* Element ko inline-block bana diya */
+  color: white;                    /* Text color white */
+  background-color: #1cb15f;      /* Thoda modern green background */
+  font-size: 16px;                 
+  font-weight: 800; 
+  border-radius: 5px;               
+  text-align: center;              /* Text center me align ho */
+  line-height: 60px;               /* Height ke center me text rahe */
+  width: 70px;                     /* Width of circle */
+  height: 60px;                    /* Height of circle */
+               /* Perfect circle */
+    /* Thin border for modern look */
+            
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Soft shadow for depth */
+        
+
+
+}

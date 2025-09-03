@@ -1,7 +1,15 @@
 import "./Teacher.css";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 export default function TeacherTopbar() {
+  const [time, setTime] = useState(new Date());
+   useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+return () => clearInterval(timer); 
+  }, []);
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -13,9 +21,11 @@ export default function TeacherTopbar() {
 
   return (
     <header className="teacher-topbar">
-      <h1>Teacher Dashboard</h1>
+      <h1>👩‍🏫 Faculty Dashboard</h1>
       <div className="teacher-profile">
-        <span className="profile-name">👩‍🏫 Komal Madam</span>
+        <span  className="time">
+        {time.toLocaleTimeString()} 
+      </span>
         <button className="logout-button" onClick={handleBack}>
           Back⬅
         </button>

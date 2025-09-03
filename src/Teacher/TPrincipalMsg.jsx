@@ -14,7 +14,7 @@ export default function TPrincipalMsg({ name, message, photo }) {
 
       <p className="principal-message">
         “{message ||
-          "Dear Teachers, thank you for your hard work and dedication. Keep inspiring students every day!"}”
+          "Remember, every lesson you deliver is shaping a brighter future for our students. Let’s continue to inspire, guide, and support them with positivity and care. 💬 Dear Teachers, thank you for your hard work and dedication. Keep inspiring students every day!"}”
       </p>
     </div>
   );
