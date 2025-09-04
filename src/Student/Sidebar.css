@@ -4,6 +4,7 @@
   background: linear-gradient(to bottom, #0f5132, #198754);
   color: white;
   padding: 20px;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -47,4 +48,18 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -220px;    
+    top: 0;
+    height: 100%;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0; 
+  }
 }

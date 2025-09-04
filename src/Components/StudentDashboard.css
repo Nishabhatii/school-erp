@@ -9,7 +9,7 @@
 .dashboard {
   display: flex;
   min-height: 100%;
-  width: 200vh;
+  width: 100%;
   background: #f5f7fa;
   border-radius: 2px;
 }
@@ -217,3 +217,31 @@ height: 190px;
  margin-left: 6px;
  margin-right: 5px;
 }
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;  /* Sidebar upar aa jayega */
+  }
+
+  .sidebar {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px 0;
+    height: auto;
+  }
+}
+
