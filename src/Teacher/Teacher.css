@@ -2,7 +2,7 @@
 .teacher-layout {
   display: flex;
   min-height: 100vh;
-  width: 100%;
+  width: 210vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f5f6fa;
 }
@@ -594,39 +594,20 @@ margin-left: 17px;
  padding: 5px 10px;
   border: 2px solid #a7bdaa;
  
-          
-  color: white;                    
-  background-color: #1cb15f;      
+           /* Element ko inline-block bana diya */
+  color: white;                    /* Text color white */
+  background-color: #1cb15f;      /* Thoda modern green background */
   font-size: 16px;                 
   font-weight: 800;                
-  text-align: center;             
-  line-height: 60px;              
-  width: 70px;                    
-  height: 60px;                    
+  text-align: center;              /* Text center me align ho */
+  line-height: 60px;               /* Height ke center me text rahe */
+  width: 70px;                     /* Width of circle */
+  height: 60px;                    /* Height of circle */
+               /* Perfect circle */
+    /* Thin border for modern look */
             
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2); 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Soft shadow for depth */
         
 
 
-}
-@media (max-width: 768px) {
-  .teacher-layout {
-    flex-direction: column;
-  }
-
-  .teacher-sidebar {
-    width: 100%; 
-    align-items: center;
-    text-align: center;
-  }
-
-  .teacher-main {
-    width: 100%;
-  }
-
-  .dashboard-grid .cardd {
-    width: 100%;  
-    margin: 10px 0;
-    height: auto; 
-  }
 }
