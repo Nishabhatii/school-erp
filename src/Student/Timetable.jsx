@@ -9,7 +9,7 @@ export default function Timetable() {
   ];
 
   return (
-    <div className="container mt-4">
+    <div style={{overflowX: "auto"}} className="container mt-4">
       <h2 className="text-center text-primary mb-4">Weekly Timetable</h2>
       
       <table className="table table-bordered table-striped text-center">
