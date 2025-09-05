@@ -42,7 +42,7 @@ export default function TNotice() {
         </button>
       </div>
 
-      <ul className="notice-list">
+      <ul className="notice-list ps-0">
         {notices.map((n) => (
           <li key={n.id}>
             <strong>{n.title}</strong> <span>({n.date})</span>

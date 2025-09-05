@@ -9,13 +9,46 @@
 
 /* Sidebar */
 .teacher-sidebar {
-  width: 240px;
+  width: 100%;
   background: linear-gradient(180deg, #77924c, #3e994a);
   color: #fff;
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+@media (min-width: 576px) {
+  .teacher-sidebar {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .teacher-sidebar {
+    width: 260px;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .teacher-sidebar {
+    width: 250px;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .teacher-sidebar {
+    width: 250px;
+    min-height: 100vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .teacher-sidebar {
+    width: 250px;
+    min-height: 100vh;
+  }
 }
 
 .teacher-sidebar .logo {
@@ -47,9 +80,12 @@
 }
 
 .teacher-sidebar a:hover {
-  background: #abe0ad;
-  color: #fff;
+  /* background: #abe0ad;
   transform: translateX(5px);
+  margin-right: 10px; */
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Main */
@@ -61,7 +97,7 @@
 
 /* Topbar */
 .teacher-topbar {
-  height: 60px;
+  /* height: 60px; */
   background: linear-gradient(180deg, #77924c, #3e994a);
   border-bottom: 1px solid #ddd;
   display: flex;
@@ -439,7 +475,7 @@ display: inline-block;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   text-align: center;
   width: 100%;
-  height: 50%;
+  min-height: 100px;
 }
 
 .about-card:hover {
@@ -506,14 +542,14 @@ display: inline-block;
   margin-top: 8px;
 }
 
-.dashboard-grid {
+/* .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   padding-top: 22px;
-}
+} */
 
-.dashboard-grid .cardd {
+/* .dashboard-grid .cardd {
   
   
     background: white;
@@ -524,6 +560,19 @@ display: inline-block;
     width: 340px;
     margin: 15px 20px 20px 20px;
     height: 37vh;
+    align-content: center;
+
+} */
+ .cardd {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+    width: 340px;
+    margin: 15px 20px 20px 20px;
+    height: 100%;
+    min-height: 40vh;
     align-content: center;
 
 }
@@ -560,6 +609,20 @@ margin-left: 17px;
 .dashboard-grid .cardd .btn:hover {
   background: #43a047;
 }
+.cardd .btn {
+  background: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 15px;
+  z-index: 1;
+}
+ .cardd .btn:hover {
+  background: #43a047;
+}
 
 
 .logout-button {
@@ -572,7 +635,7 @@ margin-left: 17px;
 }
 .profile {
   text-align: center;
- margin-left: 17px;
+ margin-left: 0px;
 
 }
 

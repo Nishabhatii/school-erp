@@ -5,7 +5,7 @@ import "react-circular-progressbar/dist/styles.css";
 
 function Attendence({ percentage }) {
   return (
-    <div className="attendance-card">  
+    <div className="attendance-card ps-3">  
       <h4>Attendance</h4>
       <div className="progress-wrapper">
         <CircularProgressbar

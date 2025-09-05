@@ -3,18 +3,19 @@ import "./Teacher.css";
 
 export default function TDashboardhome() {
   return (
-    <div className="teacher-dashboard">
-      
-      <div className="welcome-card">
+    <div className="teacher-dashboard container-fluid">
+      <div className="row">
+      <div className=" col-12 ms-3 welcome-card">
         <h2>👋 Welcome, Ms. Bhati</h2>
         <p className="principal-msg">
           "Keep inspiring students every day!" – Principal
         </p>
       </div>
 
-      <div className="dashboard-grid">
-        
-        <div className="cardd">
+      </div>
+
+      <div className="row">
+        <div className="cardd col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
           <h3>📅 Today’s Schedule</h3>
           <ul>
             <li>1st Period: Physics (10A)</li>
@@ -24,7 +25,7 @@ export default function TDashboardhome() {
         </div>
 
        
-        <div className="cardd">
+        <div className="cardd col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
            <h3>📢 Notices</h3>
           <ul>
             <li>Staff Meeting at 3 PM</li>
@@ -34,7 +35,7 @@ export default function TDashboardhome() {
         </div>
 
      
-        <div className="cardd">
+        <div className="cardd col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
           <h3>📝 Tasks</h3>
           <ul>
             <li>Check Assignment 3 (10B)</li>

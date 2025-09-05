@@ -6,11 +6,15 @@ import Footer from "./Footer";
 
 export default function LoginPage() {
   return (
-    <div className="App">
+    <div className="App container-fluid">
+      <div className="row">
+        <div className="col-12">
       <Header />
       <NoticeBar />
       <LoginForm />
       <Footer />
+        </div>
+      </div>
     </div>
   );
 }

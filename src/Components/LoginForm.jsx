@@ -15,7 +15,6 @@ function LoginForm() {
       if (role === "student") 
         {navigate("/Student-Dashboard");  
       } else if (role === "teacher") {
-        
         navigate("/TeacherDashboard")}           
       else if (role === "admin") 
        { navigate("/admin");              

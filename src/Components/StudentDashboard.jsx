@@ -1,8 +1,12 @@
 import "./StudentDashboard.css";
 import { Link, useNavigate } from "react-router-dom";
-
+import { Routes, Route } from "react-router-dom";
 import Attendence from "../Student/Attendence";
+import Timetable from "../Student/Timetable";
+import Homework from "../Student/Homework";
+import NoticeBar from "../Student/Notice";
 import FeeStatus from "../Student/FeeStatus";
+import Home from "../Student/Home";
 
 function StudentDashboard() {
   const navigate = useNavigate();
@@ -29,9 +33,10 @@ function StudentDashboard() {
   };
 
   return (
-    <div className="dashboard">
+    <div className="dashboard row w-100">
       
-      <div className="sidebar">
+      <div className="sidebar col-12 col-sm-3 col-md-3 col-lg-2 col-xl-2 sidebar-section pe-0">
+<div className="col-12 col-sm-10 col-md-12 col-lg-12 col-xl-12">
         <h2 className="logo">Student ERP</h2>
 
         <div className="profile">
@@ -42,55 +47,50 @@ function StudentDashboard() {
           />
           <h3 className="student-name">{student.name}</h3>
         </div>
-
-        <nav>
-          <Link to="/student-dashboard">Home</Link>
-          <Link to="/student-dashboard/attendance">Attendance</Link>
-          <Link to="/student-dashboard/timetable">Timetable</Link>
-          <Link to="/student-dashboard/homework">Homework</Link>
-          <Link to="/student-dashboard/notice">Notice</Link>
-          <Link to="/student-dashboard/results">Results</Link>
-          <Link to="/student-dashboard/fees">Fees</Link>
-          <Link to="/student-dashboard/library">Library</Link>
+</div>
+<div className="ps-2 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <nav className="d-flex flex-row flex-md-column flex-sm-column flex-wrap justify-content-center ">
+          <Link to="/Student-dashboard">Home</Link>
+           <Link to="/Student-dashboard/timetable">Timetable</Link>
+          <Link to="/Student-dashboard/homework">Homework</Link>
+          <Link to="/Student-dashboard/attendance">Attendance</Link>
+         
+          <Link to="/Student-dashboard/notice">Notice</Link>
+          <Link to="/Student-dashboard/results">Results</Link>
+           <Link to="/Student-dashboard/library">Library</Link>
+          <Link to="/Student-dashboard/fees">Fees</Link>
+         
         </nav>
+      </div>
       </div>
 
       {/* Main */}
-      <main className="main">
-        <header className="topbar">
+              <main className="teacher-content col-12 col-sm-9 col-md-9 col-lg-10 col-xl-10">
+                     <header className="topbar">
           <h3>Welcome, {student.name}</h3>
           <div className="profile-icons">
             <div className="icon-wrapper">
               <span className="icon">🔔</span>
             </div>
-
-            
             <div className="icon-wrapper" onClick={handleLogout}>
               <span className="icon">Back⬅</span>
             </div>
           </div>
         </header>
+            <Routes>
+            <Route index element={<Home />} />
+            <Route path="attendance" element={<Attendence />} />
+            <Route path="timetable" element={<Timetable />} />
+            <Route path="homework" element={<Homework />} />
+            <Route path="notice" element={<NoticeBar />} />
+            <Route path="results" element={<FeeStatus />} />
+            <Route path="fees" element={<FeeStatus />} />
+            <Route path="library" element={<FeeStatus />} />
 
-        <div className="cards">
-          <div className="card">
-            <h4>Today's Timetable</h4>
-            <p>Click to view</p>
-          </div>
-
-          <div className="card">
-            <h4>Homework</h4>
-            <p>Click to view</p>
-          </div>
-
-          <div className="card">
-            <Attendence percentage={78} />
-          </div>
-
-          <div>
-            <FeeStatus paidTill="September" nextDue="October" />
-          </div>
-        </div>
-      </main>
+            {/* Redirect unknown paths to index */}
+            <Route path="*" element={<div>404 - Not Found</div>} />
+          </Routes>
+        </main>
     </div>
   );
 }

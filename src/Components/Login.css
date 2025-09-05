@@ -26,7 +26,7 @@
 /* Form animation */
 .login-form {
   background: white;
-  padding: 30px;
+  /* padding: 30px; */
   border-radius: 10px;
   box-shadow: 0 6px 15px rgba(226, 230, 227, 0.1);
   width: 320px;
@@ -46,11 +46,13 @@
 body {
   background: linear-gradient(to right, #e6f9f0, #f9f9f9);
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
- margin: 0;
+  align-items: center; */
+  overflow-x: hidden;
+ margin: 0 !important;
+ padding: 0 !important;
 }
 
 /* Header */

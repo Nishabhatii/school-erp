@@ -35,7 +35,7 @@
 }
 @media (max-width: 480px) {
   .cards {
-    grid-template-columns: 1fr; /* ✅ ek row me ek card */
+    grid-template-columns: 1fr; 
   }
 
   .card {

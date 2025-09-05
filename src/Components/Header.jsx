@@ -2,7 +2,7 @@ import "./Login.css";
 
 function Header() {
   return (
-    <header className="header">
+    <header className="header w-100">
       <div className="header-left">
         <div className="school-info">
           <h1 className="school-name">XYZ International School</h1>
